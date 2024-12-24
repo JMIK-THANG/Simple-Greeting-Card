@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #bddaff;
+}
+.card {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  border: 1px solid #222;
+  margin: 80px auto 0;
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  border: none;
+  background:url(./image/floral-winter-watercolor-background-blue-with-beautiful-snow.jpg) no-repeat center center/cover; 
+  transition:all .5s ease-in-out; 
+}
+.card:hover{
+      background:url(./image/pexels-nietjuh-728462.jpg) no-repeat center center/cover; 
+      color:#fff; 
+      opacity: .9;
+}
+.card__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.card__content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 26px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 350px;
+  margin: 0 auto;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  z-index:100; 
+}
+.card__content_title {
+  padding-bottom: 20px;
+  font-family: "Ga Maamli", serif;
+}
+.card__star {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(rgb(243, 162, 10), rgb(231, 210, 170));
+  clip-path: polygon(
+    50% 0%,
+    65% 33%,
+    98% 35%,
+    75% 58%,
+    79% 91%,
+    50% 74%,
+    21% 91%,
+    28% 59%,
+    2% 35%,
+    37% 32%
+  );
+  position: absolute;
+  top: 100px;
+  left: 70%;
+  z-index: 2;
+  animation-name: star-flash;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.chrismas {
+  display: block;
+  font-family: "Ga Maamli", serif;
+}
+
+@keyframes star-flash {
+  0%,
+  100% {
+    background: rgb(228, 197, 140);
+    box-shadow: 0px 2px 20px 4px rgb(221, 161, 49, 1);
+  }
+
+  50% {
+    background: rgb(241, 161, 49);
+    box-shadow: 0px 2px 20px 4px rgb(241, 161, 49);
+  }
+}
+@keyframes even-flash {
+  0%,
+  100% {
+    background: rgb(245, 56, 56, 1);
+    box-shadow: 0px 2px 20px 4px rgb(255, 0, 0, 1);
+  }
+
+  50% {
+    background: rgba(255, 0, 0, 0.7);
+    box-shadow: 0px 2px 20px 4px rgb(255, 0, 0, 0.3);
+  }
+}
+
+@keyframes odd-flash {
+  50% {
+    background: rgb(245, 56, 56, 1);
+    box-shadow: 0px 2px 20px 4px rgb(255, 0, 0, 1);
+  }
+
+  0%,
+  100% {
+    background: rgba(255, 0, 0, 0.7);
+    box-shadow: 0px 2px 20px 4px rgb(255, 0, 0, 0.3);
+  }
+}
